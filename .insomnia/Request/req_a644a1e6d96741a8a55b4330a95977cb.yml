@@ -1,0 +1,21 @@
+_id: req_a644a1e6d96741a8a55b4330a95977cb
+type: Request
+parentId: wrk_076782c466884b9c9dc273fb1d2e4a77
+modified: 1686151652351
+created: 1686151472460
+url:  {{ _.base_url }}/market/stock/historical
+name: /historical (200)
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1686151472460
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

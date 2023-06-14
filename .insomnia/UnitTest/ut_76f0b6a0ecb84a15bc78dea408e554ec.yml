@@ -1,0 +1,12 @@
+_id: ut_76f0b6a0ecb84a15bc78dea408e554ec
+type: UnitTest
+parentId: uts_ff96e22cabaa4f38a669aad7ca22e063
+modified: 1686152544739
+created: 1686152501156
+requestId: req_72acddf8b11d460e802da14f8ec3391a
+name: /stock Returns 200
+code: |-
+  const response1 = await insomnia.send();
+  	expect(response1.status).to.equal(200);
+  	const body = JSON.parse(response1.data);
+  	expect(body).to.be.an('object');

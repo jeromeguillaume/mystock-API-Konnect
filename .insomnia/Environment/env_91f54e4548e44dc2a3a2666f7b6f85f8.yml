@@ -1,0 +1,24 @@
+_id: env_91f54e4548e44dc2a3a2666f7b6f85f8
+type: Environment
+parentId: env_9335cd5f3617f739d3800e27aed36033970d2d02
+modified: 1686151468302
+created: 1686151329337
+name: Private
+data:
+  scheme: http
+  base_path: /anything
+  host: httpbin.apim.eu:80
+  base_url: "{{ _.scheme }}://{{ _.host }}{{ _.base_path }}"
+  base_host: "{{ _.scheme }}://{{ _.host }}"
+  tickers: AAPL
+dataPropertyOrder:
+  "&":
+    - scheme
+    - base_path
+    - host
+    - base_url
+    - base_host
+    - tickers
+color: null
+isPrivate: false
+metaSortKey: 1686151329337

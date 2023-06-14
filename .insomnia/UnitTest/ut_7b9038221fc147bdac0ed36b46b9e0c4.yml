@@ -1,0 +1,12 @@
+_id: ut_7b9038221fc147bdac0ed36b46b9e0c4
+type: UnitTest
+parentId: uts_ff96e22cabaa4f38a669aad7ca22e063
+modified: 1686152538402
+created: 1686152499010
+requestId: req_a644a1e6d96741a8a55b4330a95977cb
+name: /historical Returns 200
+code: |-
+  const response1 = await insomnia.send();
+  	expect(response1.status).to.equal(200);
+  	const body = JSON.parse(response1.data);
+  	expect(body).to.be.an('object');

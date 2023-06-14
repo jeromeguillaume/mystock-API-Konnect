@@ -1,0 +1,21 @@
+_id: req_72acddf8b11d460e802da14f8ec3391a
+type: Request
+parentId: wrk_076782c466884b9c9dc273fb1d2e4a77
+modified: 1686151654922
+created: 1686151637110
+url:  {{ _.base_url }}/market/stock/stock
+name: /stock (200)
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1684108343470.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

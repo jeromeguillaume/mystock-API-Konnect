@@ -1,0 +1,10 @@
+_id: ut_7ce32008535d40829741a08ddec98a7f
+type: UnitTest
+parentId: uts_a9d943efece94821a77efb3c129287e1
+modified: 1686152314139
+created: 1686151789027
+requestId: req_0bb6beae3553451bbf2e1531ea9790c7
+name: /stock Returns 500
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(500);

@@ -1,0 +1,21 @@
+_id: req_0bb6beae3553451bbf2e1531ea9790c7
+type: Request
+parentId: wrk_076782c466884b9c9dc273fb1d2e4a77
+modified: 1686151773708
+created: 1686151770484
+url:  {{ _.base_host }}/status/500
+name: /stock (500)
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1684108343420.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

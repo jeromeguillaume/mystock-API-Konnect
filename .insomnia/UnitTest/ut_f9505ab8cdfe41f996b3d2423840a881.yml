@@ -1,0 +1,10 @@
+_id: ut_f9505ab8cdfe41f996b3d2423840a881
+type: UnitTest
+parentId: uts_bc9971a474704cd49425dfd41d6926cd
+modified: 1686152320889
+created: 1686152197216
+requestId: req_7cea34ea5cb54b99b86aaddd0aef470f
+name: /historical Returns 503
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(503);

@@ -1,0 +1,10 @@
+_id: ut_eecf6b6d150b429690e8e0439befb40e
+type: UnitTest
+parentId: uts_f032201d653447c3b4c875003a963d5f
+modified: 1686152478206
+created: 1686152419910
+requestId: req_5073743c1e1a4513a99bca366454b680
+name: /stock Returns 403
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(403);

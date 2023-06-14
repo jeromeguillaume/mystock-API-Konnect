@@ -1,0 +1,10 @@
+_id: ut_77c2ab32f13e4c7b961423c2af3642e9
+type: UnitTest
+parentId: uts_bc9971a474704cd49425dfd41d6926cd
+modified: 1686152336810
+created: 1686152201371
+requestId: req_7214dcb2e54a4f0ab88abb2ad460077b
+name: /stock 503
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(503);

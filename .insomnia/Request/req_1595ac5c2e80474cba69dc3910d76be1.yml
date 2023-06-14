@@ -1,0 +1,21 @@
+_id: req_1595ac5c2e80474cba69dc3910d76be1
+type: Request
+parentId: wrk_076782c466884b9c9dc273fb1d2e4a77
+modified: 1686152435887
+created: 1686152429438
+url: "{{ _.base_host }}/status/403"
+name: /historical (403)
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1685640690212.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
