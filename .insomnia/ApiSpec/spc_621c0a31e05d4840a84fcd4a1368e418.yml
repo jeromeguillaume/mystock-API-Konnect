@@ -1,7 +1,7 @@
 _id: spc_621c0a31e05d4840a84fcd4a1368e418
 type: ApiSpec
 parentId: wrk_076782c466884b9c9dc273fb1d2e4a77
-modified: 1686737837807
+modified: 1686738167294
 created: 1686140078581
 fileName: myStock-API-Konnect.yaml
 contents: >-
@@ -9,7 +9,7 @@ contents: >-
 
   info:
     title: Market Stock
-    version: 1.0.1
+    version: 1.0.2
     description: Market Stock API Information Service - mocking for demo purpose
     contact:
       name: Jerome Guillaume
@@ -73,7 +73,7 @@ contents: >-
                              adj_close: 174.42
                              close: 102.05
                              open: 101.95                     
-    '/market/stock/closing/{tickers}':
+    '/market/stock/closing':
       get:
         operationId: get_market_stock_closing
         summary: closing value
@@ -82,7 +82,7 @@ contents: >-
           - market
         parameters:
           - name: tickers
-            in: path
+            in: query
             required: true
             schema:
               type: string
