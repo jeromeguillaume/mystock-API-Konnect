@@ -1,7 +1,7 @@
 _id: spc_621c0a31e05d4840a84fcd4a1368e418
 type: ApiSpec
 parentId: wrk_076782c466884b9c9dc273fb1d2e4a77
-modified: 1686737053557
+modified: 1686737837807
 created: 1686140078581
 fileName: myStock-API-Konnect.yaml
 contents: >-
@@ -9,7 +9,7 @@ contents: >-
 
   info:
     title: Market Stock
-    version: 1.0.0
+    version: 1.0.1
     description: Market Stock API Information Service - mocking for demo purpose
     contact:
       name: Jerome Guillaume
@@ -29,7 +29,7 @@ contents: >-
   x-kong-plugin-mocking:
           enabled: true
           config:
-            api_specification: "{\"swagger\": \"2.0\",\n \"info\" : {\n \"title\": \"Stock API\",\n \"description\": \"Stock Information Service\",\n \"version\": \"0.1\"\n },\n \"host\": \"127.0.0.1:8000\",\n \"basePath\": \"/\",\n \"schemes\": [\n \"http\",\n \"https\"\n ],\n \"consumes\": [\n \"application/json\"\n ],\n \"produces\": [\n \"application/json\"\n ],\n \"paths\": {\n \"/stock/historical\": {\n \"get\": {\n \"description\": \"\",\n \"operationId\": \"GET /stock/historical\",\n \"produces\": [\n \"application/json\"\n ],\n \"tags\": [\n \"Production\"\n ],\n \"parameters\": [\n {\n \"required\": true,\n \"in\": \"query\",\n \"name\": \"tickers\",\n \"type\": \"string\"\n }\n ],\n \"responses\": {\n \"200\": {\n \"description\": \"Status 200\",\n \"examples\": {\n \"application/json\":\n {\n \"meta_data\" : {\n \"api_name\" : \"historical_stock_price_v2\",\n \"num_total_data_points\" : 1,\n \"credit_cost\" : 10,\n \"start_date\" : \"yesterday\",\n \"end_date\" : \"yesterday\"\n },\n \"result_data\" : {\n \"IBM\" : [ {\n \"date\" : \"2023-06-15\",\n \"volume\" : 876,\n \"high\" : 99.01,\n \"low\" : 87.02,\n \"adj_close\" : 174.42,\n \"close\" : 102.05,\n \"open\" : 101.95\n } ]\n }\n }\n }\n }\n }\n }\n },\n \"/stock/closing\": {\n \"get\": {\n \"description\": \"\",\n \"operationId\": \"GET /stock/closing\",\n \"produces\": [\n \"application/json\"\n ],\n \"tags\": [\n \"Beta\"\n ],\n \"parameters\": [\n {\n \"required\": true,\n \"in\": \"query\",\n \"name\": \"tickers\",\n \"type\": \"string\"\n }\n ],\n \"responses\": {\n \"200\": {\n \"description\": \"Status 200\",\n \"examples\": {\n \"application/json\":\n {\n \"meta_data\" : {\n \"api_name\" : \"closing_stock_price_v1\"\n },\n \"result_data\" : {\n \"AAPL\" : [ {\n \"date\" : \"2000-06-23\",\n \"volume\" : 33,\n \"high\" : 100.75,\n \"low\" : 100.87,\n \"adj_close\" : 275.03,\n \"close\" : 100.03,\n \"open\" : 100.87\n } ]\n }\n }\n }\n }\n }\n }\n }\n }\n}"
+            api_specification: "{\"swagger\": \"2.0\",\n \"info\" : {\n \"title\": \"Stock API\",\n \"description\": \"Stock Information Service\",\n \"version\": \"0.1\"\n },\n \"host\": \"127.0.0.1:8000\",\n \"basePath\": \"/\",\n \"schemes\": [\n \"http\",\n \"https\"\n ],\n \"consumes\": [\n \"application/json\"\n ],\n \"produces\": [\n \"application/json\"\n ],\n \"paths\": {\n \"/market/stock/historical\": {\n \"get\": {\n \"description\": \"\",\n \"operationId\": \"GET /market/stock/historical\",\n \"produces\": [\n \"application/json\"\n ],\n \"tags\": [\n \"Production\"\n ],\n \"parameters\": [\n {\n \"required\": true,\n \"in\": \"query\",\n \"name\": \"tickers\",\n \"type\": \"string\"\n }\n ],\n \"responses\": {\n \"200\": {\n \"description\": \"Status 200\",\n \"examples\": {\n \"application/json\":\n {\n \"meta_data\" : {\n \"api_name\" : \"historical_stock_price_v2\",\n \"num_total_data_points\" : 1,\n \"credit_cost\" : 10,\n \"start_date\" : \"yesterday\",\n \"end_date\" : \"yesterday\"\n },\n \"result_data\" : {\n \"IBM\" : [ {\n \"date\" : \"2023-06-15\",\n \"volume\" : 876,\n \"high\" : 99.01,\n \"low\" : 87.02,\n \"adj_close\" : 174.42,\n \"close\" : 102.05,\n \"open\" : 101.95\n } ]\n }\n }\n }\n }\n }\n }\n },\n \"/market/stock/closing\": {\n \"get\": {\n \"description\": \"\",\n \"operationId\": \"GET /market/stock/closing\",\n \"produces\": [\n \"application/json\"\n ],\n \"tags\": [\n \"Beta\"\n ],\n \"parameters\": [\n {\n \"required\": true,\n \"in\": \"query\",\n \"name\": \"tickers\",\n \"type\": \"string\"\n }\n ],\n \"responses\": {\n \"200\": {\n \"description\": \"Status 200\",\n \"examples\": {\n \"application/json\":\n {\n \"meta_data\" : {\n \"api_name\" : \"closing_stock_price_v1\"\n },\n \"result_data\" : {\n \"AAPL\" : [ {\n \"date\" : \"2000-06-23\",\n \"volume\" : 33,\n \"high\" : 100.75,\n \"low\" : 100.87,\n \"adj_close\" : 275.03,\n \"close\" : 100.03,\n \"open\" : 100.87\n } ]\n }\n }\n }\n }\n }\n }\n }\n }\n}"
   x-kong-plugin-key-auth:
     name: key-auth
     enabled: true
