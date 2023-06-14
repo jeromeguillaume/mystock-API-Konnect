@@ -1,0 +1,26 @@
+name: Apply configuration to Konnect
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy_to_kong:
+    runs-on: self-hosted
+    name: Apply config to Konnect
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: lint
+        run: inso lint spec spc_621c0a
+      - name: Security checks
+        run: inso run test --env env_91f54e4548 spc_621c0a 
+      - name: Generate OAS spec from insomnia
+        run: inso generate config spc_621c0a -o kong-marketStock.yaml --ci
+      - name: Convert config
+        run: deck convert --input-file kong-marketStock.yaml --from kong-gateway-2.x --to kong-gateway-3.x --output-file  kong-marketStockv3.yaml
+      - name: Import Config in Konnect
+        run: |
+          deck --konnect-token spat_aeBn1P3cT1e7LScTFnuOe6FDS2x8evjjqYtaTirfnpIgup5JO --konnect-runtime-group-name 'JCDecaux' reset --select-tag market -f
+          deck --konnect-token spat_aeBn1P3cT1e7LScTFnuOe6FDS2x8evjjqYtaTirfnpIgup5JO --konnect-runtime-group-name 'JCDecaux' sync -s kong-marketStockv3.yaml --select-tag market
